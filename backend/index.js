@@ -15,7 +15,12 @@ const uri=process.env.MONGO_URL;
 const app=express();
 
 app.use(cors());
+
 app.use(bodyparser.json());
+app.use((req, res, next) => {
+  console.log("REQUEST:", req.method, req.url);
+  next();
+});
 // app.get('/addHoldings',async(req,res)=>{
 //     let tempHoldings=[
     
@@ -196,6 +201,7 @@ app.get('/allPositions',async(req,res)=>{
 });
 
 app.post("/newOrder", async (req, res) => {
+  console.log("NEW ORDER RECEIVED:", req.body);
   try {
     const { name, qty, price, mode } = req.body;
 
