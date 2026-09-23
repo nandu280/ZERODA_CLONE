@@ -3,8 +3,7 @@ import React from "react";
 
 const Signup = () => {
   const goToSignup = () => {
-    window.location.href = "http://localhost:3000/signup";
-  };
+  window.location.href = "https://authentication-client-t4zs.onrender.com/signup";};
 
   return (
     <div
