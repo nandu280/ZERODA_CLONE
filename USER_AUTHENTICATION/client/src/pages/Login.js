@@ -40,7 +40,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/login",
+        "https://zerodha-auth-backend-pqn0.onrender.com/login",
         {
           email,
           password,

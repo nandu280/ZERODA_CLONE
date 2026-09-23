@@ -19,7 +19,7 @@ const Home = () => {
 
       try {
         const { data } = await axios.post(
-          "http://localhost:4000",
+          "https://zerodha-auth-backend-pqn0.onrender.com",
           {},
           {
             withCredentials: true,
