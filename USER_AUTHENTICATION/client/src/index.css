@@ -1,0 +1,198 @@
+
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   HTML & BODY
+========================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(143, 187, 204, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+
+/* =========================
+   FORM LABELS
+========================= */
+
+label {
+  font-size: 1rem;
+  color: #656262;
+}
+
+
+/* =========================
+   LOGIN / SIGNUP FORM
+========================= */
+
+.form_container {
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 2rem 3rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 24px rgba(66, 68, 90, 0.6);
+}
+
+.form_container h2 {
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  color: rgba(0, 212, 255, 1);
+  text-align: center;
+}
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form_container form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form_container input {
+  width: 100%;
+  padding: 0.6rem 0.3rem;
+  border: none;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form_container input:focus {
+  border-bottom: 2px solid rgba(0, 212, 255, 1);
+}
+
+.form_container input::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #999;
+}
+
+.form_container button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 212, 255, 1);
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form_container button:hover {
+  background-color: rgb(0, 170, 205);
+}
+
+.form_container span {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form_container span a {
+  color: rgba(0, 212, 255, 1);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form_container span a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home_page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.home_page span {
+  color: rgba(0, 212, 255, 1);
+}
+
+.home_page button {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 2rem;
+
+  background-color: rgb(27, 73, 83);
+  color: #ffffff;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.home_page button:hover {
+  background-color: rgba(0, 212, 255, 1);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .form_container {
+    width: 92%;
+    margin: 50px auto;
+    padding: 1.5rem;
+  }
+
+  .home_page {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .home_page button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
