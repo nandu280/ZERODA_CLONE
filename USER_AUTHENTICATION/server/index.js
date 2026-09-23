@@ -9,8 +9,8 @@ const authRoute = require("./Routes/AuthRoute");
 
 const app = express();
 
-const { MONGO_URL, PORT } = process.env;
-
+const { MONGO_URL } = process.env;
+const PORT = process.env.PORT || 4000;
 
 // =========================
 // MIDDLEWARE
@@ -18,7 +18,7 @@ const { MONGO_URL, PORT } = process.env;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -27,13 +27,11 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
-
 // =========================
 // ROUTES
 // =========================
 
 app.use("/", authRoute);
-
 
 // =========================
 // MONGODB + SERVER
@@ -51,5 +49,3 @@ mongoose
   .catch((err) => {
     console.error("MongoDB connection error:", err);
   });
-
- 
