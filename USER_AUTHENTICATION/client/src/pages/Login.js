@@ -58,8 +58,7 @@ const Login = () => {
         handleSuccess(message);
 
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
-        }, 1000);
+window.location.href = "https://zerodha-dashboard-tsya.onrender.com";        }, 1000);
       } else {
         handleError(message);
       }
